@@ -1,0 +1,349 @@
+body {
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-image: url('C:/Users/WILLY/OneDrive/Documents/TRUE NORTH/layout.jpg'); /* Add background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensure the background image stays fixed */
+  color: #333;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background-image: url('true_north.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+header {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+nav {
+  background: #6B5B4D;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.9); /* Add transparency to the container */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+h2 {
+  color: #8B7355;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.service-box {
+  border: 3px solid #8B7355;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: opacity 0.5s ease-in-out; /* Add transition for fading effect */
+}
+
+.service-box strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #8B7355;
+}
+
+.service-box ul {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.feedback-box {
+  border: 3px solid #8B7355;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: opacity 0.5s ease-in-out; /* Add transition for fading effect */
+}
+
+.feedback-box p {
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+.feedback-box strong {
+  color: #8B7355;
+}
+
+footer {
+  background: #6B5B4D;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.map {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 8px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.drone-box {
+  grid-column: 1 / -1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #8B7355;
+}
+
+.contact-item p {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-button {
+  background-color: #8B7355;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-window {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.chatbot-header {
+  background-color: #8B7355;
+  color: #fff;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.chatbot-body {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.chatbot-footer {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+}
+
+.chatbot-footer input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chatbot-footer button {
+  background-color: #8B7355;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.message {
+  margin-bottom: 10px;
+}
+
+.message.bot {
+  text-align: left;
+}
+
+.message.user {
+  text-align: right;
+}
+
+.message p {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.message.bot p {
+  background-color: #f1f1f1;
+}
+
+.message.user p {
+  background-color: #8B7355;
+  color: #fff;
+}
+
+/* Fade Sections */
+.fade-section {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.fade-section.visible {
+  opacity: 1; /* Visible when scrolled into view */
+}
+
+/* Sliding Images Section */
+.sliding-images-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 40px 0;
+  z-index: 1;
+}
+
+.sliding-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.sliding-images {
+  display: flex;
+  width: 300%;
+  animation: slide 30s linear infinite;
+}
+
+.sliding-images img {
+  width: 33.33%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.66%);
+  }
+}
